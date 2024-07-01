@@ -222,17 +222,10 @@ function destaparNivel2(id) {
     }
 }
 
-// Función para mostrar el botón de volver y ocultar los elementos del juego
+// Función para mostrar el botón de volver
 function mostrarBotonVolver() {
     const botonVolver = document.getElementById('botonVolver');
     botonVolver.style.display = 'block';
-}
-
-// Función para ocultar todos los elementos del juego
-function ocultarElementosJuego() {
-    document.getElementById('nivel1').style.display = 'none';
-    document.getElementById('nivel2').style.display = 'none';
-    document.getElementById('contenedor').style.display = 'none';
 }
 
 // Event listener para el botón de volver
