@@ -36,19 +36,18 @@ console.log(numeros1);
 function contarTiempo1() {
     tiempoRegresivoId1 = setInterval(() => {
         timer1--;
-        mostrarTiempo1.innerHTML = `Tiempo: ${timer1} segundos`;
+        mostrarTiempo1.innerHTML = Tiempo: ${timer1} segundos;
         if (timer1 == 0) {
             clearInterval(tiempoRegresivoId1);
             bloquearTarjetas1();
             loseAudio.play();
-            mostrarVolverIntentar();
         }
     }, 1000);
 }
 
 function bloquearTarjetas1() {
     for (let i = 0; i <= 15; i++) {
-        let tarjetaBloqueada = document.getElementById(`n1_${i}`);
+        let tarjetaBloqueada = document.getElementById(n1_${i});
         tarjetaBloqueada.innerHTML = numeros1[i];
         tarjetaBloqueada.disabled = true;
     }
@@ -65,7 +64,7 @@ function destaparNivel1(id) {
 
     if (tarjetasDestapadas1 == 1) {
         // Mostrar Primer Número
-        tarjeta1_1 = document.getElementById(`n1_${id}`);
+        tarjeta1_1 = document.getElementById(n1_${id});
         primerResultado1 = numeros1[id];
         tarjeta1_1.innerHTML = primerResultado1;
         clickAudio.play();
@@ -74,7 +73,7 @@ function destaparNivel1(id) {
         tarjeta1_1.disabled = true;
     } else if (tarjetasDestapadas1 == 2) {
         // Mostrar Segundo Número
-        tarjeta2_1 = document.getElementById(`n1_${id}`);
+        tarjeta2_1 = document.getElementById(n1_${id});
         segundoResultado1 = numeros1[id];
         tarjeta2_1.innerHTML = segundoResultado1;
 
@@ -83,7 +82,7 @@ function destaparNivel1(id) {
 
         // Incrementar Movimientos
         movimientos1++;
-        mostrarMovimientos1.innerHTML = `Movimientos: ${movimientos1}`;
+        mostrarMovimientos1.innerHTML = Movimientos: ${movimientos1};
 
         if (primerResultado1 == segundoResultado1) {
             // Encerrar tarjetas destapadas
@@ -91,15 +90,15 @@ function destaparNivel1(id) {
 
             // Aumentar aciertos
             aciertos1++;
-            mostrarAciertos1.innerHTML = `Aciertos: ${aciertos1}`;
+            mostrarAciertos1.innerHTML = Aciertos: ${aciertos1};
             rightAudio.play();
 
             if (aciertos1 == 8) {
                 winAudio.play();
                 clearInterval(tiempoRegresivoId1);
-                mostrarAciertos1.innerHTML = `Aciertos: ${aciertos1} ¡Ganaste!`;
-                mostrarTiempo1.innerHTML = `¡Fantástico! Solo demoraste ${timerInicial1 - timer1} segundos`;
-                mostrarMovimientos1.innerHTML = `Movimientos: ${movimientos1} ¡Buen Trabajo!`;
+                mostrarAciertos1.innerHTML = Aciertos: ${aciertos1} ¡Ganaste!;
+                mostrarTiempo1.innerHTML = ¡Fantástico! Solo demoraste ${timerInicial1 - timer1} segundos;
+                mostrarMovimientos1.innerHTML = Movimientos: ${movimientos1} ¡Buen Trabajo!;
                 // Mostrar el segundo nivel después de ganar el primer nivel
                 setTimeout(() => {
                     document.getElementById('nivel1').style.display = 'none';
@@ -145,20 +144,19 @@ console.log(numeros2);
 function contarTiempo2() {
     tiempoRegresivoId2 = setInterval(() => {
         timer2--;
-        mostrarTiempo2.innerHTML = `Tiempo: ${timer2} segundos`;
+        mostrarTiempo2.innerHTML = Tiempo: ${timer2} segundos;
         if (timer2 == 0) {
             clearInterval(tiempoRegresivoId2);
             bloquearTarjetas2();
             loseAudio.play();
-            mostrarVolverIntentar();
         }
     }, 1000);
 }
 
 function bloquearTarjetas2() {
     for (let i = 0; i <= 23; i++) {
-        let tarjetaBloqueada = document.getElementById(`n2_${i}`);
-        tarjetaBloqueada.innerHTML = `<img src="./img/${numeros2[i]}.png" alt="">`;
+        let tarjetaBloqueada = document.getElementById(n2_${i});
+        tarjetaBloqueada.innerHTML = <img src="./img/${numeros2[i]}.png" alt="">;
         tarjetaBloqueada.disabled = true;
     }
 }
@@ -174,25 +172,25 @@ function destaparNivel2(id) {
 
     if (tarjetasDestapadas2 == 1) {
         // Mostrar Primer Número
-        tarjeta1_2 = document.getElementById(`n2_${id}`);
+        tarjeta1_2 = document.getElementById(n2_${id});
         primerResultado2 = numeros2[id];
-        tarjeta1_2.innerHTML = `<img src="./img/${primerResultado2}.png" alt="">`;
+        tarjeta1_2.innerHTML = <img src="./img/${primerResultado2}.png" alt="">;
         clickAudio.play();
 
         // Deshabilitar botón
         tarjeta1_2.disabled = true;
     } else if (tarjetasDestapadas2 == 2) {
         // Mostrar Segundo Número
-        tarjeta2_2 = document.getElementById(`n2_${id}`);
+        tarjeta2_2 = document.getElementById(n2_${id});
         segundoResultado2 = numeros2[id];
-        tarjeta2_2.innerHTML = `<img src="./img/${segundoResultado2}.png" alt="">`;
+        tarjeta2_2.innerHTML = <img src="./img/${segundoResultado2}.png" alt="">;
 
         // Deshabilitar segundo botón
         tarjeta2_2.disabled = true;
 
         // Incrementar Movimientos
         movimientos2++;
-        mostrarMovimientos2.innerHTML = `Movimientos: ${movimientos2}`;
+        mostrarMovimientos2.innerHTML = Movimientos: ${movimientos2};
 
         if (primerResultado2 == segundoResultado2) {
             // Encerrar tarjetas destapadas
@@ -200,25 +198,22 @@ function destaparNivel2(id) {
 
             // Aumentar aciertos
             aciertos2++;
-            mostrarAciertos2.innerHTML = `Aciertos: ${aciertos2}`;
+            mostrarAciertos2.innerHTML = Aciertos: ${aciertos2};
             rightAudio.play();
 
             if (aciertos2 == 12) {
                 winAudio.play();
                 clearInterval(tiempoRegresivoId2);
-                mostrarAciertos2.innerHTML = `Aciertos: ${aciertos2} ¡Ganaste!`;
-                mostrarTiempo2.innerHTML = `¡Fantástico! Solo demoraste ${timerInicial2 - timer2} segundos`;
-                mostrarMovimientos2.innerHTML = `Movimientos: ${movimientos2} ¡Buen Trabajo!`;
-
-                // Mostrar el botón volver a intentar
-                mostrarVolverIntentar();
+                mostrarAciertos2.innerHTML = Aciertos: ${aciertos2} ¡Ganaste!;
+                mostrarTiempo2.innerHTML = ¡Fantástico! Solo demoraste ${timerInicial2 - timer2} segundos;
+                mostrarMovimientos2.innerHTML = Movimientos: ${movimientos2} ¡Buen Trabajo!;
             }
         } else {
             wrongAudio.play();
             // Mostrar momentáneamente valores y volver a tapar
             setTimeout(() => {
-                tarjeta1_2.innerHTML = '';
-                tarjeta2_2.innerHTML = '';
+                tarjeta1_2.innerHTML = ' ';
+                tarjeta2_2.innerHTML = ' ';
                 tarjeta1_2.disabled = false;
                 tarjeta2_2.disabled = false;
                 tarjetasDestapadas2 = 0;
@@ -227,63 +222,6 @@ function destaparNivel2(id) {
     }
 }
 
-// Función para mostrar el botón de volver a intentar
-function mostrarVolverIntentar() {
-    let botonVolverIntentar = document.getElementById('botonVolverIntentar');
-    botonVolverIntentar.style.display = 'block';
-}
-
-// Función para reiniciar el juego
-function reiniciarJuego() {
-    // Reiniciar variables y estado del juego
-    temporizador1 = false;
-    temporizador2 = false;
-    tiempoRegresivoId1 = null;
-    tiempoRegresivoId2 = null;
-    tarjetasDestapadas1 = 0;
-    tarjetasDestapadas2 = 0;
-    primerResultado1 = null;
-    segundoResultado1 = null;
-    primerResultado2 = null;
-    segundoResultado2 = null;
-    movimientos1 = 0;
-    movimientos2 = 0;
-    aciertos1 = 0;
-    aciertos2 = 0;
-    timer1 = 35;
-    timer2 = 65;
-
-    mostrarMovimientos1.innerHTML = 'Movimientos: 0';
-    mostrarAciertos1.innerHTML = 'Aciertos: 0';
-    mostrarTiempo1.innerHTML = 'Tiempo: 35 segundos';
-
-    mostrarMovimientos2.innerHTML = 'Movimientos: 0';
-    mostrarAciertos2.innerHTML = 'Aciertos: 0';
-    mostrarTiempo2.innerHTML = 'Tiempo: 65 segundos';
-
-    // Ocultar el botón de volver a intentar
-    let botonVolverIntentar = document.getElementById('botonVolverIntentar');
-    botonVolverIntentar.style.display = 'none';
-
-    // Reiniciar tarjetas del nivel 1
-    for (let i = 0; i <= 15; i++) {
-        let tarjeta = document.getElementById(`n1_${i}`);
-        tarjeta.innerHTML = '';
-        tarjeta.disabled = false;
-    }
-
-    // Reiniciar tarjetas del nivel 2
-    for (let i = 0; i <= 23; i++) {
-        let tarjeta = document.getElementById(`n2_${i}`);
-        tarjeta.innerHTML = '';
-        tarjeta.disabled = false;
-    }
-
-    // Ocultar nivel 2 y mostrar nivel 1
-    document.getElementById('nivel1').style.display = 'block';
-    document.getElementById('nivel2').style.display = 'none';
-}
-
-function volverAlInicio() {
+function volverInicio() {
     window.location.href = "https://juegos-5to-baco.onrender.com";
 }
