@@ -222,14 +222,6 @@ function destaparNivel2(id) {
     }
 }
 
-// Función para mostrar el botón de volver
-function mostrarBotonVolver() {
-    const botonVolver = document.getElementById('botonVolver');
-    botonVolver.style.display = 'block';
+function volverInicio() {
+    window.location.href = "https://juegos-5to-baco.onrender.com";
 }
-
-// Event listener para el botón de volver
-const botonVolver = document.getElementById('botonVolver');
-botonVolver.addEventListener('click', () => {
-    window.location.href = 'https://juegos-5to-baco.onrender.com';
-});
