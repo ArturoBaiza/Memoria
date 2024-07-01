@@ -41,6 +41,7 @@ function contarTiempo1() {
             clearInterval(tiempoRegresivoId1);
             bloquearTarjetas1();
             loseAudio.play();
+            mostrarVolverIntentar();
         }
     }, 1000);
 }
@@ -149,6 +150,7 @@ function contarTiempo2() {
             clearInterval(tiempoRegresivoId2);
             bloquearTarjetas2();
             loseAudio.play();
+            mostrarVolverIntentar();
         }
     }, 1000);
 }
@@ -207,13 +209,16 @@ function destaparNivel2(id) {
                 mostrarAciertos2.innerHTML = `Aciertos: ${aciertos2} ¡Ganaste!`;
                 mostrarTiempo2.innerHTML = `¡Fantástico! Solo demoraste ${timerInicial2 - timer2} segundos`;
                 mostrarMovimientos2.innerHTML = `Movimientos: ${movimientos2} ¡Buen Trabajo!`;
+
+                // Mostrar el botón volver a intentar
+                mostrarVolverIntentar();
             }
         } else {
             wrongAudio.play();
             // Mostrar momentáneamente valores y volver a tapar
             setTimeout(() => {
-                tarjeta1_2.innerHTML = ' ';
-                tarjeta2_2.innerHTML = ' ';
+                tarjeta1_2.innerHTML = '';
+                tarjeta2_2.innerHTML = '';
                 tarjeta1_2.disabled = false;
                 tarjeta2_2.disabled = false;
                 tarjetasDestapadas2 = 0;
@@ -222,6 +227,63 @@ function destaparNivel2(id) {
     }
 }
 
-function volverInicio() {
+// Función para mostrar el botón de volver a intentar
+function mostrarVolverIntentar() {
+    let botonVolverIntentar = document.getElementById('botonVolverIntentar');
+    botonVolverIntentar.style.display = 'block';
+}
+
+// Función para reiniciar el juego
+function reiniciarJuego() {
+    // Reiniciar variables y estado del juego
+    temporizador1 = false;
+    temporizador2 = false;
+    tiempoRegresivoId1 = null;
+    tiempoRegresivoId2 = null;
+    tarjetasDestapadas1 = 0;
+    tarjetasDestapadas2 = 0;
+    primerResultado1 = null;
+    segundoResultado1 = null;
+    primerResultado2 = null;
+    segundoResultado2 = null;
+    movimientos1 = 0;
+    movimientos2 = 0;
+    aciertos1 = 0;
+    aciertos2 = 0;
+    timer1 = 35;
+    timer2 = 65;
+
+    mostrarMovimientos1.innerHTML = 'Movimientos: 0';
+    mostrarAciertos1.innerHTML = 'Aciertos: 0';
+    mostrarTiempo1.innerHTML = 'Tiempo: 35 segundos';
+
+    mostrarMovimientos2.innerHTML = 'Movimientos: 0';
+    mostrarAciertos2.innerHTML = 'Aciertos: 0';
+    mostrarTiempo2.innerHTML = 'Tiempo: 65 segundos';
+
+    // Ocultar el botón de volver a intentar
+    let botonVolverIntentar = document.getElementById('botonVolverIntentar');
+    botonVolverIntentar.style.display = 'none';
+
+    // Reiniciar tarjetas del nivel 1
+    for (let i = 0; i <= 15; i++) {
+        let tarjeta = document.getElementById(`n1_${i}`);
+        tarjeta.innerHTML = '';
+        tarjeta.disabled = false;
+    }
+
+    // Reiniciar tarjetas del nivel 2
+    for (let i = 0; i <= 23; i++) {
+        let tarjeta = document.getElementById(`n2_${i}`);
+        tarjeta.innerHTML = '';
+        tarjeta.disabled = false;
+    }
+
+    // Ocultar nivel 2 y mostrar nivel 1
+    document.getElementById('nivel1').style.display = 'block';
+    document.getElementById('nivel2').style.display = 'none';
+}
+
+function volverAlInicio() {
     window.location.href = "https://juegos-5to-baco.onrender.com";
 }
