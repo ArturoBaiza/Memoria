@@ -222,7 +222,21 @@ function destaparNivel2(id) {
     }
 }
 
-
-function volverInicio() {
-    window.location.href = "https://juegos-5to-baco.onrender.com";
+// Función para mostrar el botón de volver y ocultar los elementos del juego
+function mostrarBotonVolver() {
+    const botonVolver = document.getElementById('botonVolver');
+    botonVolver.style.display = 'block';
 }
+
+// Función para ocultar todos los elementos del juego
+function ocultarElementosJuego() {
+    document.getElementById('nivel1').style.display = 'none';
+    document.getElementById('nivel2').style.display = 'none';
+    document.getElementById('contenedor').style.display = 'none';
+}
+
+// Event listener para el botón de volver
+const botonVolver = document.getElementById('botonVolver');
+botonVolver.addEventListener('click', () => {
+    window.location.href = 'https://juegos-5to-baco.onrender.com';
+});
