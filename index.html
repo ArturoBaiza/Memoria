@@ -1,85 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JUEGO DE MEMORIA</title>
+    <title>Juego de Memoria</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="memoria.png" type="image/png">
 </head>
-<body> 
-    <header>
-        <h1>Juego de Memoria</h1> 
-    </header>
-    <main id="nivel1">
-        <section class="section1">
-            <div id="tablero1" class="tablero">
-                <!-- Botones del nivel 1 -->
-                <button id="n1_0" onclick="destaparNivel1(0)"></button>
-                <button id="n1_1" onclick="destaparNivel1(1)"></button>
-                <button id="n1_2" onclick="destaparNivel1(2)"></button>
-                <button id="n1_3" onclick="destaparNivel1(3)"></button>
-                <button id="n1_4" onclick="destaparNivel1(4)"></button>
-                <button id="n1_5" onclick="destaparNivel1(5)"></button>
-                <button id="n1_6" onclick="destaparNivel1(6)"></button>
-                <button id="n1_7" onclick="destaparNivel1(7)"></button>
-                <button id="n1_8" onclick="destaparNivel1(8)"></button>
-                <button id="n1_9" onclick="destaparNivel1(9)"></button>
-                <button id="n1_10" onclick="destaparNivel1(10)"></button>
-                <button id="n1_11" onclick="destaparNivel1(11)"></button>
-                <button id="n1_12" onclick="destaparNivel1(12)"></button>
-                <button id="n1_13" onclick="destaparNivel1(13)"></button>
-                <button id="n1_14" onclick="destaparNivel1(14)"></button>
-                <button id="n1_15" onclick="destaparNivel1(15)"></button>
-            </div>
-        </section>
-        <section class="section2">
-            <h2 id="aciertos" class="estadisticas">Aciertos: 0</h2>
-            <h2 id="t.restante" class="estadisticas">Tiempo: 35 Segundos</h2>
-            <h2 id="movimientos" class="estadisticas">Movimientos: 0</h2>
-        </section>
-        <button id="volverInicio" onclick="volverInicio()">Volver al Inicio</button>
-    </main>
-    <main id="nivel2" style="display: none;">
-        <section class="section1">
-            <div id="tablero2" class="tablero">
-                <!-- Botones del nivel 2 -->
-                <button id="n2_0" onclick="destaparNivel2(0)"></button>
-                <button id="n2_1" onclick="destaparNivel2(1)"></button>
-                <button id="n2_2" onclick="destaparNivel2(2)"></button>
-                <button id="n2_3" onclick="destaparNivel2(3)"></button>
-                <button id="n2_4" onclick="destaparNivel2(4)"></button>
-                <button id="n2_5" onclick="destaparNivel2(5)"></button>
-                <button id="n2_6" onclick="destaparNivel2(6)"></button>
-                <button id="n2_7" onclick="destaparNivel2(7)"></button>
-                <button id="n2_8" onclick="destaparNivel2(8)"></button>
-                <button id="n2_9" onclick="destaparNivel2(9)"></button>
-                <button id="n2_10" onclick="destaparNivel2(10)"></button>
-                <button id="n2_11" onclick="destaparNivel2(11)"></button>
-                <button id="n2_12" onclick="destaparNivel2(12)"></button>
-                <button id="n2_13" onclick="destaparNivel2(13)"></button>
-                <button id="n2_14" onclick="destaparNivel2(14)"></button>
-                <button id="n2_15" onclick="destaparNivel2(15)"></button>
-                <button id="n2_16" onclick="destaparNivel2(16)"></button>
-                <button id="n2_17" onclick="destaparNivel2(17)"></button>
-                <button id="n2_18" onclick="destaparNivel2(18)"></button>
-                <button id="n2_19" onclick="destaparNivel2(19)"></button>
-                <button id="n2_20" onclick="destaparNivel2(20)"></button>
-                <button id="n2_21" onclick="destaparNivel2(21)"></button>
-                <button id="n2_22" onclick="destaparNivel2(22)"></button>
-                <button id="n2_23" onclick="destaparNivel2(23)"></button>
-            </div>
-        </section>
-        <section class="section2">
-            <h2 id="aciertos2" class="estadisticas">Aciertos: 0</h2>
-            <h2 id="t.restante2" class="estadisticas">Tiempo: 65 Segundos</h2>
-            <h2 id="movimientos2" class="estadisticas">Movimientos: 0</h2>
-        </section>
-        <button id="volverInicio2" onclick="volverInicio()">Volver al Inicio</button>
-    </main>
-    <footer>
-        <p><h2>Juego Programado por 5to.Baco</h2></p>
-    </footer>
-    <script src="main.js"></script>
+<body>
+    <div id="nivel1">
+        <h2>Nivel 1</h2>
+        <div id="tablero1">
+            <!-- Tarjetas del Nivel 1 -->
+            <button id="n1_0" onclick="destaparNivel1(0)"></button>
+            <button id="n1_1" onclick="destaparNivel1(1)"></button>
+            <button id="n1_2" onclick="destaparNivel1(2)"></button>
+            <button id="n1_3" onclick="destaparNivel1(3)"></button>
+            <button id="n1_4" onclick="destaparNivel1(4)"></button>
+            <button id="n1_5" onclick="destaparNivel1(5)"></button>
+            <button id="n1_6" onclick="destaparNivel1(6)"></button>
+            <button id="n1_7" onclick="destaparNivel1(7)"></button>
+            <button id="n1_8" onclick="destaparNivel1(8)"></button>
+            <button id="n1_9" onclick="destaparNivel1(9)"></button>
+            <button id="n1_10" onclick="destaparNivel1(10)"></button>
+            <button id="n1_11" onclick="destaparNivel1(11)"></button>
+            <button id="n1_12" onclick="destaparNivel1(12)"></button>
+            <button id="n1_13" onclick="destaparNivel1(13)"></button>
+            <button id="n1_14" onclick="destaparNivel1(14)"></button>
+            <button id="n1_15" onclick="destaparNivel1(15)"></button>
+        </div>
+        <p id="movimientos">Movimientos: 0</p>
+        <p id="aciertos">Aciertos: 0</p>
+        <p id="t.restante">Tiempo: 35 segundos</p>
+        <button id="reiniciarNivel1" onclick="reiniciarNivel1()" style="display:none;">Volver a Intentar</button>
+        <button id="volverAlInicio1" onclick="volverAlInicio()">Volver al Inicio</button>
+    </div>
+
+    <div id="nivel2" style="display:none;">
+        <h2>Nivel 2</h2>
+        <div id="tablero2">
+            <!-- Tarjetas del Nivel 2 -->
+            <button id="n2_0" onclick="destaparNivel2(0)"></button>
+            <button id="n2_1" onclick="destaparNivel2(1)"></button>
+            <button id="n2_2" onclick="destaparNivel2(2)"></button>
+            <button id="n2_3" onclick="destaparNivel2(3)"></button>
+            <button id="n2_4" onclick="destaparNivel2(4)"></button>
+            <button id="n2_5" onclick="destaparNivel2(5)"></button>
+            <button id="n2_6" onclick="destaparNivel2(6)"></button>
+            <button id="n2_7" onclick="destaparNivel2(7)"></button>
+            <button id="n2_8" onclick="destaparNivel2(8)"></button>
+            <button id="n2_9" onclick="destaparNivel2(9)"></button>
+            <button id="n2_10" onclick="destaparNivel2(10)"></button>
+            <button id="n2_11" onclick="destaparNivel2(11)"></button>
+            <button id="n2_12" onclick="destaparNivel2(12)"></button>
+            <button id="n2_13" onclick="destaparNivel2(13)"></button>
+            <button id="n2_14" onclick="destaparNivel2(14)"></button>
+            <button id="n2_15" onclick="destaparNivel2(15)"></button>
+            <button id="n2_16" onclick="destaparNivel2(16)"></button>
+            <button id="n2_17" onclick="destaparNivel2(17)"></button>
+            <button id="n2_18" onclick="destaparNivel2(18)"></button>
+            <button id="n2_19" onclick="destaparNivel2(19)"></button>
+            <button id="n2_20" onclick="destaparNivel2(20)"></button>
+            <button id="n2_21" onclick="destaparNivel2(21)"></button>
+            <button id="n2_22" onclick="destaparNivel2(22)"></button>
+            <button id="n2_23" onclick="destaparNivel2(23)"></button>
+        </div>
+        <p id="movimientos2">Movimientos: 0</p>
+        <p id="aciertos2">Aciertos: 0</p>
+        <p id="t.restante2">Tiempo: 65 segundos</p>
+        <button id="reiniciarNivel2" onclick="reiniciarNivel2()" style="display:none;">Volver a Intentar</button>
+        <button id="volverAlInicio2" onclick="volverAlInicio()">Volver al Inicio</button>
+        <button id="volverAlNivel1" onclick="volverAlNivel1()">Regresar al Nivel 1</button>
+    </div>
+
+    <script src="main2.js"></script>
 </body>
 </html>
