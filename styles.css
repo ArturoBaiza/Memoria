@@ -123,7 +123,7 @@ body {
             background-color: rgba(255, 255, 255, 0.6);
         }
 
-        #volverAlInicio, #volverAlInicio2 {
+        #volverInicio, #volverInicio2 {
             position: absolute;
             left: 20px; /* Ajusta la distancia del borde izquierdo */
             bottom: 20px; /* Ajusta la distancia del borde inferior */
@@ -136,7 +136,7 @@ body {
             transition: 0.3s;
         }
 
-        #volverAlInicio:hover, #volverAlInicio2:hover {
+        #volverInicio:hover, #volverInicio2:hover {
             transform: scale(1.1);
         }
 
