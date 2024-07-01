@@ -221,3 +221,8 @@ function destaparNivel2(id) {
         }
     }
 }
+
+
+function volverInicio() {
+    window.location.href = "https://juegos-5to-baco.onrender.com";
+}
