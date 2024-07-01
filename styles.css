@@ -89,6 +89,7 @@ footer {
 }
 
 #nivel1, #nivel2 {
+  display: none; /* Inicialmente ocultos */
   width: 100%;
   max-width: 600px; /* Reducido el ancho máximo para hacerlo más compacto */
   background-color: rgba(255, 255, 255, 0.2); 
@@ -108,18 +109,20 @@ footer {
   border-collapse: collapse;
 }
 
-#nivel1 button, #nivel2 button {
+#nivel1 button, #nivel2 button, #volverJugar {
+  display: none; /* Inicialmente oculto */
   height: 60px; /* Reducido el tamaño de las cartas */
-  width: 60px; /* Reducido el tamaño de las cartas */
+  width: 180px; /* Ancho ajustado para el botón */
   font-size: 24px; /* Reducido el tamaño de la fuente */
   color: #FFFF00; /* Cambiado el color del texto de los botones a amarillo brillante */
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.4);
   border: none;
   cursor: pointer;
+  margin-top: 10px; /* Espacio superior */
 }
 
-#nivel1 button:hover, #nivel2 button:hover {
+#nivel1 button:hover, #nivel2 button:hover, #volverJugar:hover {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -146,5 +149,9 @@ footer {
   footer {
     margin-top: 20px; /* Reducido el margen superior del footer */
     padding: 10px; /* Ajustado el padding */
+  }
+
+  #nivel1 button, #nivel2 button, #volverJugar {
+    width: 150px; /* Ancho ajustado para el botón en pantallas pequeñas */
   }
 }
