@@ -1,167 +1,150 @@
- /* Estilos base */
+/* Estilos base */
 body {
-            background: linear-gradient(135deg, #D52027 0%, #3168AF 100%), url('https://i.pinimg.com/originals/f5/75/2c/f5752c7c9f03832209f0bb8b57214281.gif');
-            background-size: cover, 40%; 
-            background-blend-mode: overlay;
-            background-position: center, center;
-            background-repeat: no-repeat, no-repeat;
-            font-family: sans-serif;
-            color: white;
-            text-align: center;
-        }
+  background: linear-gradient(135deg, #D52027 0%, #3168AF 100%), url('https://i.pinimg.com/originals/f5/75/2c/f5752c7c9f03832209f0bb8b57214281.gif');
+  background-size: cover, 40%; 
+  background-blend-mode: overlay;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
 
-        header, footer {
-            margin: 20px;
-        }
+header, footer {
+  margin: 20px;
+}
 
-        main {
-            width: 100%;
-            max-width: 600px; /* Reducido el ancho máximo para hacerlo más compacto */
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+main {
+  width: 100%;
+  max-width: 600px; /* Reducido el ancho máximo para hacerlo más compacto */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-        .section1, .section2 {
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            padding: 10px; /* Reducido el padding para hacerlo más compacto */
-            margin-bottom: 10px; /* Reducido el margen inferior */
-            width: 100%;
-            box-sizing: border-box;
-        }
+.section1, .section2 {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 10px; /* Reducido el padding para hacerlo más compacto */
+  margin-bottom: 10px; /* Reducido el margen inferior */
+  width: 100%;
+  box-sizing: border-box;
+}
 
-        .tablero {
-            display: grid;
-            gap: 5px; /* Reducido el espacio entre las cartas */
-        }
+.tablero {
+  display: grid;
+  gap: 5px; /* Reducido el espacio entre las cartas */
+}
 
-        #tablero1 {
-            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Ajustado el tamaño mínimo y máximo de las cartas */
-        }
+#tablero1 {
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Ajustado el tamaño mínimo y máximo de las cartas */
+}
 
-        #tablero2 {
-            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Ajustado el tamaño mínimo y máximo de las cartas */
-        }
+#tablero2 {
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Ajustado el tamaño mínimo y máximo de las cartas */
+}
 
-        button {
-            height: 60px; /* Reducido el tamaño de las cartas */
-            width: 60px; /* Reducido el tamaño de las cartas */
-            font-size: 24px; /* Reducido el tamaño de la fuente */
-            color: white;
-            font-weight: bold;
-            background: none;
-            border: none;
-        }
+button {
+  height: 60px; /* Reducido el tamaño de las cartas */
+  width: 60px; /* Reducido el tamaño de las cartas */
+  font-size: 24px; /* Reducido el tamaño de la fuente */
+  color: white;
+  font-weight: bold;
+  background: none;
+  border: none;
+}
 
-        button img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 8px;
-        }
+button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
-        button:hover {
-            cursor: pointer;
-        }
+button:hover {
+  cursor: pointer;
+}
 
-        .estadisticas {
-            border: 1px solid white;
-            height: auto; /* Ajuste para que el tamaño se adapte al contenido */
-            border-radius: 8px;
-            padding: 8px 15px; /* Ajustado el padding */
-            box-sizing: border-box;
-            margin-bottom: 10px;
-            text-align: left; /* Alineado a la izquierda */
-            color: #00FFFF; /* Cambiado el color de las estadísticas a cian brillante */
-        }
+.estadisticas {
+  border: 1px solid white;
+  height: auto; /* Ajuste para que el tamaño se adapte al contenido */
+  border-radius: 8px;
+  padding: 8px 15px; /* Ajustado el padding */
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  text-align: left; /* Alineado a la izquierda */
+  color: #00FFFF; /* Cambiado el color de las estadísticas a cian brillante */
+}
 
-        footer {
-            text-align: center;
-            margin-top: 30px; /* Reducido el margen superior del footer */
-            padding: 15px; /* Ajustado el padding */
-            border-radius: 8px; 
-            background-color: rgba(255, 255, 255, 0.2);
-            box-sizing: border-box;
-            color: #00FFFF; /* Cambiado el color del footer a cian brillante */
-        }
+footer {
+  text-align: center;
+  margin-top: 30px; /* Reducido el margen superior del footer */
+  padding: 15px; /* Ajustado el padding */
+  border-radius: 8px; 
+  background-color: rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  color: #00FFFF; /* Cambiado el color del footer a cian brillante */
+}
 
-        #nivel1, #nivel2 {
-            width: 100%;
-            max-width: 600px; /* Reducido el ancho máximo para hacerlo más compacto */
-            background-color: rgba(255, 255, 255, 0.2); 
-            padding: 20px;
-            border-radius: 8px;
-            box-sizing: border-box;
-            color: #00FFFF; /* Cambiado el color de los textos a cian brillante */
-        }
+#nivel1, #nivel2 {
+  width: 100%;
+  max-width: 600px; /* Reducido el ancho máximo para hacerlo más compacto */
+  background-color: rgba(255, 255, 255, 0.2); 
+  padding: 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #00FFFF; /* Cambiado el color de los textos a cian brillante */
+}
 
-        #nivel1 h1, #nivel2 h1 {
-            text-align: center;
-            margin-bottom: 15px; /* Reducido el margen inferior del título */
-        }
+#nivel1 h1, #nivel2 h1 {
+  text-align: center;
+  margin-bottom: 15px; /* Reducido el margen inferior del título */
+}
 
-        #nivel1 table, #nivel2 table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+#nivel1 table, #nivel2 table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-        #nivel1 button, #nivel2 button {
-            height: 60px; /* Reducido el tamaño de las cartas */
-            width: 60px; /* Reducido el tamaño de las cartas */
-            font-size: 24px; /* Reducido el tamaño de la fuente */
-            color: #FFFF00; /* Cambiado el color del texto de los botones a amarillo brillante */
-            font-weight: bold;
-            background-color: rgba(255, 255, 255, 0.4);
-            border: none;
-            cursor: pointer;
-        }
+#nivel1 button, #nivel2 button {
+  height: 60px; /* Reducido el tamaño de las cartas */
+  width: 60px; /* Reducido el tamaño de las cartas */
+  font-size: 24px; /* Reducido el tamaño de la fuente */
+  color: #FFFF00; /* Cambiado el color del texto de los botones a amarillo brillante */
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+}
 
-        #nivel1 button:hover, #nivel2 button:hover {
-            background-color: rgba(255, 255, 255, 0.6);
-        }
+#nivel1 button:hover, #nivel2 button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
 
-        #volverInicio, #volverInicio2 {
-            position: absolute;
-            left: 20px; /* Ajusta la distancia del borde izquierdo */
-            bottom: 20px; /* Ajusta la distancia del borde inferior */
-            padding: 10px 15px;
-            background-color: #fff;
-            border: 1px solid #000;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
 
-        #volverInicio:hover, #volverInicio2:hover {
-            transform: scale(1.1);
-        }
+  .section1, .section2 {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
 
-        @media (max-width: 768px) {
-            main {
-                padding: 10px;
-            }
+  button {
+    height: 50px; /* Reducido el tamaño de las cartas */
+    width: 50px; /* Reducido el tamaño de las cartas */
+    font-size: 18px; /* Reducido el tamaño de la fuente */
+  }
 
-            .section1, .section2 {
-                padding: 10px;
-                margin-bottom: 10px;
-            }
+  .estadisticas {
+    padding: 8px 10px; /* Ajustado el padding */
+  }
 
-            button {
-                height: 50px; /* Reducido el tamaño de las cartas */
-                width: 50px; /* Reducido el tamaño de las cartas */
-                font-size: 18px; /* Reducido el tamaño de la fuente */
-            }
-
-            .estadisticas {
-                padding: 8px 10px; /* Ajustado el padding */
-            }
-
-            footer {
-                margin-top: 20px; /* Reducido el margen superior del footer */
-                padding: 10px; /* Ajustado el padding */
-            }
-        }
+  footer {
+    margin-top: 20px; /* Reducido el margen superior del footer */
+    padding: 10px; /* Ajustado el padding */
+  }
+}
