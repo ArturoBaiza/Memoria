@@ -19,8 +19,8 @@ let primerResultado1 = null;
 let segundoResultado1 = null;
 let movimientos1 = 0;
 let aciertos1 = 0;
-let timer1 = 35;
-let timerInicial1 = 35;
+let timer1 = 55;
+let timerInicial1 = 55;
 
 // Apuntando a Documento HTML Nivel 1
 let mostrarMovimientos1 = document.getElementById('movimientos');
@@ -127,8 +127,8 @@ let primerResultado2 = null;
 let segundoResultado2 = null;
 let movimientos2 = 0;
 let aciertos2 = 0;
-let timer2 = 65;
-let timerInicial2 = 65;
+let timer2 = 85;
+let timerInicial2 = 85;
 
 // Apuntando a Documento HTML Nivel 2
 let mostrarMovimientos2 = document.getElementById('movimientos2');
